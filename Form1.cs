@@ -28,11 +28,29 @@ namespace GestionDonnees_notes_cours
             dataGridView1.Columns[1].Name = "C2";
             dataGridView1.Columns[1].HeaderText = "Mot de passse";
             dataGridView1.Columns[1].Width = 200;*/
+            for (int i = 0; i < 10; i++)
+            {
+                dataGridView1.Rows.Add("Utilisateur" + i, "Mot de passe" + i);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Add(textBox1.Text, textBox2.Text);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Sélection sur les lignes
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            //Seletion sur une cellule à la fois
+            //textBox3.Text = dataGridView1.SelectedCells[0].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
         }
     }
 }
