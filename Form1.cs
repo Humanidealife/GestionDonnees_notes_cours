@@ -32,6 +32,15 @@ namespace GestionDonnees_notes_cours
             {
                 dataGridView1.Rows.Add("Utilisateur" + i, "Mot de passe" + i);
             }
+
+            Users u1 = new Users("A", "111");
+            Users u2 = new Users("B", "222");
+            Users u3 = new Users("C", "333");
+
+            bindingSource1.Add(u1);
+            bindingSource1.Add(u2);
+            bindingSource1.Add(u3);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +60,14 @@ namespace GestionDonnees_notes_cours
         private void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*Users selection = dataGridView2.SelectedRows[0].DataBoundItem as Users;
+            textBox5.Text = selection.Utilisateur;
+            textBox6.Text = selection.MotDePasse;*/
+
         }
     }
 }

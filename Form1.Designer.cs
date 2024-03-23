@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +38,15 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.utilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motDePasseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -95,14 +104,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(41, 345);
+            this.textBox3.Location = new System.Drawing.Point(41, 324);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(156, 22);
             this.textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(237, 345);
+            this.textBox4.Location = new System.Drawing.Point(242, 324);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(156, 22);
             this.textBox4.TabIndex = 5;
@@ -117,11 +126,65 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.utilisateurDataGridViewTextBoxColumn,
+            this.motDePasseDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.bindingSource1;
+            this.dataGridView2.Location = new System.Drawing.Point(31, 440);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(642, 348);
+            this.dataGridView2.TabIndex = 7;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(31, 389);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(197, 22);
+            this.textBox5.TabIndex = 8;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(262, 389);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(197, 22);
+            this.textBox6.TabIndex = 9;
+            // 
+            // utilisateurDataGridViewTextBoxColumn
+            // 
+            this.utilisateurDataGridViewTextBoxColumn.DataPropertyName = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn.HeaderText = "Utilisateur";
+            this.utilisateurDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.utilisateurDataGridViewTextBoxColumn.Name = "utilisateurDataGridViewTextBoxColumn";
+            this.utilisateurDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // motDePasseDataGridViewTextBoxColumn
+            // 
+            this.motDePasseDataGridViewTextBoxColumn.DataPropertyName = "MotDePasse";
+            this.motDePasseDataGridViewTextBoxColumn.HeaderText = "MotDePasse";
+            this.motDePasseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.motDePasseDataGridViewTextBoxColumn.Name = "motDePasseDataGridViewTextBoxColumn";
+            this.motDePasseDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(GestionDonnees_notes_cours.Users);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 979);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -133,6 +196,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +214,12 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn utilisateurDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motDePasseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
 
