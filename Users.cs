@@ -12,13 +12,15 @@ namespace GestionDonnees_notes_cours
         public string Utilisateur{ get; set; }
         public string MotDePasse { get; set; }
 
-        //Création du constructeur
+        //Création du constructeur personnalisé
         public Users(string utilisateur, string motDePasse)
         {
             Utilisateur = utilisateur;
             MotDePasse = motDePasse;
         }
 
+        //Création du constructeur par défaut (obligatoire)
+        //surtout pour le bouton d'ajout de données dans bindingNavigator
         public Users() { }
     }
 }

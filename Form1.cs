@@ -74,5 +74,10 @@ namespace GestionDonnees_notes_cours
         {
             MessageBox.Show("Suppression");
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("le bouton est cliqué");
+        }
     }
 }
