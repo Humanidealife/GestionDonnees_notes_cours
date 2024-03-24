@@ -41,6 +41,16 @@ namespace GestionDonnees_notes_cours
             bindingSource1.Add(u2);
             bindingSource1.Add(u3);
 
+            chart1.Series["Moyenne"].Points.AddXY("Math", 15);
+            chart1.Series["Moyenne"].Points.AddXY("Physique", 12);
+            chart1.Series["Moyenne"].Points.AddXY("Français", 18);
+            chart1.Series["Moyenne"].Points.AddXY("Anglais", 14);
+
+            chart1.Series["Moyenne an dernier"].Points.AddXY("Math", 18);
+            chart1.Series["Moyenne an dernier"].Points.AddXY("Physique", 10);
+            chart1.Series["Moyenne an dernier"].Points.AddXY("Français", 15);
+            chart1.Series["Moyenne an dernier"].Points.AddXY("Anglais", 14);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,5 +89,6 @@ namespace GestionDonnees_notes_cours
         {
             MessageBox.Show("le bouton est cliqué");
         }
+
     }
 }
