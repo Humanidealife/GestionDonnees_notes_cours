@@ -18,5 +18,7 @@ namespace GestionDonnees_notes_cours
             Utilisateur = utilisateur;
             MotDePasse = motDePasse;
         }
+
+        public Users() { }
     }
 }

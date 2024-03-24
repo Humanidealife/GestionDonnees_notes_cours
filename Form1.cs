@@ -64,10 +64,15 @@ namespace GestionDonnees_notes_cours
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*Users selection = dataGridView2.SelectedRows[0].DataBoundItem as Users;
+            Users selection = dataGridView2.SelectedRows[0].DataBoundItem as Users;
             textBox5.Text = selection.Utilisateur;
-            textBox6.Text = selection.MotDePasse;*/
+            textBox6.Text = selection.MotDePasse;
 
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Suppression");
         }
     }
 }
